@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="person" class="com.rays.test.Person"> <property name="name" 
+		value="Sejal"></property> setName("Sejal"); <property name="address" value="Indore"></property> 
+		setAdress("Indore"); </bean> <bean id="person1" class="com.rays.test.Person"> 
+		<property name="name" value="Riya"></property> setName("Riya"); <property name="address" 
+		value="Bhopal"></property> setAdress("Bhopal"); </bean> -->
+
+
+	<!-- Person person = new Person("Bhpendra", "Jhansi") -->
+	<bean id="person" class="com.rays.test.Person">
+		<constructor-arg value="Priyanshi"></constructor-arg> <!-- name -->
+		<constructor-arg value="rai"></constructor-arg> <!-- address -->
+	</bean>
+
+
+
+</beans>
