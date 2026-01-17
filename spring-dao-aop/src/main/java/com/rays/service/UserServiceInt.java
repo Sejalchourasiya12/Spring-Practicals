@@ -10,12 +10,16 @@ public interface UserServiceInt {
 
 	public void update(UserDTO dto);
 
-	public UserDTO findByPk(long pk);
+	public List search(UserDTO dto);
 
-	public void delete(long pk);
+	public List search(UserDTO dto, int pageNo, int pageSize);
+
+	public UserDTO delete(long id);
 
 	public UserDTO findByLogin(String login);
-	
-	public List<UserDTO> search(UserDTO dto, int pageNo, int pageSize);
+
+	public UserDTO findByPK(long pk);
+
+	public UserDTO authenticate(String login, String password);
 
 }
