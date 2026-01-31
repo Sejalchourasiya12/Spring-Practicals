@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page isELIgnored="false"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
-<%@taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,31 +12,32 @@
 	<sf:form method="post" modelAttribute="form">
 		<div align="center">
 			<h1 style="color: navy">User Registration</h1>
-			<span style="color: green">${msg}</span>
+			<span style="color: green">${msg}</span> <span style="color: red">${emsg}</span>
 			<table>
 				<tr>
 					<th align="left">First Name :</th>
-					<td><sf:input path="firstName" /></td>
+					<td><sf:input path="firstName" placeholder="enter first name" /></td>
 				</tr>
 				<tr>
 					<th align="left">Last Name :</th>
-					<td><sf:input path="lastName" /></td>
+					<td><sf:input path="lastName" placeholder="enter last name" /></td>
 				</tr>
 				<tr>
 					<th align="left">Login ID :</th>
-					<td><sf:input path="login" /></td>
+					<td><sf:input path="login" placeholder="enter your login" /></td>
 				</tr>
 				<tr>
 					<th align="left">Password :</th>
-					<td><sf:input path="password" /></td>
+					<td><sf:input path="password"
+							placeholder="enter your password" /></td>
 				</tr>
 				<tr>
 					<th align="left">Date Of Birth :</th>
-					<td><sf:input path="dob" /></td>
+					<td><sf:input path="dob" placeholder="enter your dob" /></td>
 				</tr>
 				<tr>
 					<th align="left">Address :</th>
-					<td><sf:input path="address" /></td>
+					<td><sf:input path="address" placeholder="enter first name" /></td>
 				</tr>
 				<tr>
 					<th></th>

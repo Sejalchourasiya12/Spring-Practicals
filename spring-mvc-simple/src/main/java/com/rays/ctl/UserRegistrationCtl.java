@@ -34,10 +34,15 @@ public class UserRegistrationCtl {
 		dto.setPassword(form.getPassword());
 		dto.setDob(DataUtility.stringToDate(form.getDob()));
 		dto.setAddress(form.getAddress());
-
+         
+		
+		try {
 		service.add(dto);
 		model.addAttribute("msg", "User Registration Successfully");
-
+		}catch(Exception e) {
+			model.addAttribute("emsg", e.getMessage());
+		}
+		
 		return "UserRegistration";
 
 	}

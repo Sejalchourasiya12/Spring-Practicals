@@ -9,16 +9,22 @@ public class DataUtility {
 	static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 	public static Date stringToDate(String value) {
-		try {
-			return sdf.parse(value);
-		} catch (ParseException e) {
-			return null;
-		}
+		if (value != null && value.trim().length() > 0) {
+	        try {
+	            return sdf.parse(value);
+	        } catch (ParseException e) {
+	            return null;
+	        }
+	    }
+	    return null;
 	}
 
 	public static String dateToString(Date value) {
 
-		return sdf.format(value);
+		if (value != null) {
+	        return sdf.format(value);
+	    }
+	    return "";   // empty string JSP ke liye safe
+	}
 
 	}
-}

@@ -3,7 +3,10 @@ package com.rays.form;
 public class UserForm {
 
 	protected long id = 0;
+	
+	public Long[] ids ;
 
+	
 	private String firstName;
 
 	private String lastName;
@@ -17,6 +20,8 @@ public class UserForm {
 	private String address;
 
 	private int pageNo;
+	
+	
 
 	public long getId() {
 		return id;
@@ -81,5 +86,14 @@ public class UserForm {
 	public void setPageNo(int pageNo) {
 		this.pageNo = pageNo;
 	}
+	
+	public Long[] getIds() {
+		return ids;
+	}
+
+	public void setIds(Long[] ids) {
+		this.ids = ids;
+	}
+
 
 }

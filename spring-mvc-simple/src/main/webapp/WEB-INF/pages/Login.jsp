@@ -9,6 +9,7 @@
 </head>
 <body>
 	<%@ include file="Header.jsp"%>
+	
 	<sf:form method="post" modelAttribute="form">
 		<div align="center">
 			<h1 style="color: navy">Login</h1>
